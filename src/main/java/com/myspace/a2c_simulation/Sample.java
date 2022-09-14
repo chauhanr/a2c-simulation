@@ -6,12 +6,24 @@ package com.myspace.a2c_simulation;
 
 public class Sample implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Sample() {
-    }
+	@org.kie.api.definition.type.Label(value = "name")
+	private java.lang.String name;
 
+	public Sample() {
+	}
 
+	public java.lang.String getName() {
+		return this.name;
+	}
 
+	public void setName(java.lang.String name) {
+		this.name = name;
+	}
+
+	public Sample(java.lang.String name) {
+		this.name = name;
+	}
 
 }
