@@ -14,6 +14,9 @@ public class Sample implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("age")
 	private java.lang.Integer age;
 
+	@org.kie.api.definition.type.Label(value = "surname")
+	private java.lang.String surname;
+
 	public Sample() {
 	}
 
@@ -33,9 +36,19 @@ public class Sample implements java.io.Serializable {
 		this.age = age;
 	}
 
-	public Sample(java.lang.String name, java.lang.Integer age) {
+	public java.lang.String getSurname() {
+		return this.surname;
+	}
+
+	public void setSurname(java.lang.String surname) {
+		this.surname = surname;
+	}
+
+	public Sample(java.lang.String name, java.lang.Integer age,
+			java.lang.String surname) {
 		this.name = name;
 		this.age = age;
+		this.surname = surname;
 	}
 
 }
